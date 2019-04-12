@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>YUFAN</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+      
+        
+    </head>
+    <body>
+        
+        
+
+
+        <div id="wrapper"> 
+
+    
+<form id="purchaseform" action="mailto:pedalworld@gmail.com?subject=Item%20Purchase" method="post" enctype="text/plain">
+    <div>purchase information:</div>
+    item: <input type="text" name="Item number" required><br>
+    quality: <input type="text" name="quality" required><br>
+    <div>contact form:</div><br>
+    First Name: <input type="text" name="First Name" required><br>
+    Last Name: <input type="text" name="Last Name" required><br>
+    Phone Number: <input type="text" id="pno" name="Phone number" pattern="[0-9]{10}" maxlength="10" required><br>
+    E-Mail: <input type="email" id="email" name="e-mail" required><br>
+    Address: <input type="text" id="address" name="Address" size="100" required><br> 
+    <div>payment:</div>
+    Card Number: <input type="text" id="cno" name="Card number" pattern="[0-9]{16}" maxlength="16" required><br>
+    Shipping Method: <input type="text" name="Shipping method" required>
+    <center>
+        <input type="submit" value="Purchase">
+        <input type="reset" name="Reset">
+    </center></form>
+
+        </div>
+    </body>
+</html>

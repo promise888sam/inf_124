@@ -1,0 +1,166 @@
+body {
+
+    font-family: "Helvetica","Arial",Tahoma;
+    font-color: white;
+}
+h1{
+    margin-top: 170px;
+    height: 140px;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+h3{
+    height: 100px;
+    color: #528ae5;
+    text-align: center;
+    font-size: x-large;
+}
+
+h6{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h2.small{
+    height: 140px;
+    line-height: 90%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2cm;
+}
+h4.small{
+    height: 140px;
+    line-height: 90%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2cm;
+}
+h5{
+    height: 100px;
+    color: #528ae5;
+    text-align: center;
+    font-size: x-large;
+}
+p{
+    color: white;
+    padding: 2%;
+}
+em{
+    text-align: center;
+}
+img{
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: 96%;
+    padding: 2%;
+    
+}
+#wrapper{
+    color: white;
+    margin: 0 auto;
+    max-width: 980px;
+    width: 96%;
+    background: black;
+    padding: 2%;
+    border-radius: 10px;
+}
+h7{
+    height: 500px;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+header{
+    padding: 5px;
+    text-align: center;
+}
+nav{
+
+    background: #616366;
+    
+}
+nav ul{
+    list-style: none;
+
+    padding: 0;
+}
+nav li a{
+    color: #000;
+    display: block;
+    float: left;
+    padding:20px;
+    text-decoration: none;
+}
+nav a:hover, nav li.active a{
+    background-color: #322F2C;
+    color: #fff;
+}
+.clear{
+    clear :both;
+}
+
+#social img{
+    padding-top: 5px;
+    height: 50px;
+    width: 50px;
+    
+}
+.left-col{
+    background: #373737;
+    width: 100%;
+    float:left;
+    margin-top: 2%;
+
+    border-radius: 10px;
+    border:1px;
+}
+.sidbar{
+    background: black;
+    width: 100%;
+    float:left;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+div.gallery {
+    margin: 15px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    height: 290px;
+    transition: all 0.6s;
+}
+
+div.gallery:hover {
+    color: #FF8C00;
+    border: 1px solid #777;
+    transform: scale(1.05);
+    
+}
+
+div.gallery img {
+    width: 90%;
+    height: auto;
+    
+}
+
+
+
+div.pu img{
+   
+    width: 15%;
+    height: auto;
+    
+}
