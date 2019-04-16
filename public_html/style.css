@@ -21,9 +21,9 @@ h1{
 }
 h3{
     height: 100px;
-    color: #528ae5;
+    color: #000000;
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 h6{
@@ -76,7 +76,7 @@ img{
     margin: 0 auto;
 
 
-    background: white;
+    background: black;
     padding: 2%;
 
 }
@@ -188,7 +188,22 @@ div.gallery img {
 
 div.pu img{
    
-    width: 15%;
-    height: auto;
+    width: 100;
+    height: 100;
     
+}
+
+td.lib{
+    margin: 15px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 200px;
+    height: 320px;
+    transition: all 0.6s;
+    display: block;
+}
+td.lib:hover{
+    color: #FF8C00;
+    border: 1px solid #777;
+    transform: scale(1.05);
 }
