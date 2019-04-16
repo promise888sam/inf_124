@@ -21,7 +21,7 @@
 <form id="purchaseform" action="mailto:pedalworld@gmail.com?subject=Item%20Purchase" method="post" enctype="text/plain">
     <div>purchase information:</div>
     item: <input type="text" name="Item number" required><br>
-    quality: <input type="text" name="quality" required><br>
+    quality: <input type="text" name="quality" pattern="[0-9]{}" required><br>
     <div>contact form:</div><br>
     First Name: <input type="text" name="First Name" required><br>
     Last Name: <input type="text" name="Last Name" required><br>
