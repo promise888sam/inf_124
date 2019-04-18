@@ -1,5 +1,5 @@
 body {
-
+    background:#b3ffff;
     font-family: "Helvetica","Arial",Tahoma;
     font-color: white;
 }
@@ -13,17 +13,17 @@ body {
 		
 	}
 h1{
-    margin-top: 170px;
-    height: 140px;
-    color: white;
-    text-align: center;
-    font-size: xx-large;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 h3{
-    height: 100px;
+    height: 150px;
     color: #000000;
     text-align: center;
-    font-size: xx-large;
+    font-size: 500%;
 }
 
 h6{
@@ -51,10 +51,12 @@ h4.small{
     font-size: 1.2cm;
 }
 h5{
-    height: 100px;
-    color: #528ae5;
-    text-align: center;
-    font-size: x-large;
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+
 }
 p{
     color: white;
@@ -68,23 +70,43 @@ img{
 
     height: auto;
 
-
-    
 }
+
+
 #wrapper{
-    color: black;
-    margin: 0 auto;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
 
-
-    background: black;
-    padding: 2%;
-
+    background: #333333;
+    padding: 3%;
+    text-align: center;
 }
+.info{
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    font-size: 24px;
+}
+
+th{
+    
+    border: 1px solid #FFFFFF;
+    text-align: center;
+}
+
 #row{
     background-color: white;
 }
 #bd{
     background-image: url("https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65");
+}
+
+#about{
+    margin-left: 50px;
+    margin-right: 50px;
 }
 h7{
     height: 500px;
@@ -99,28 +121,29 @@ header{
 nav{
 
     background: #616366;
-    
+    list-style: none;
 }
 nav ul{
     list-style: none;
 
-
 }
 nav li a{
-    
+    width: 100px;
+    font-size: large;
     color: white;
     display: block;
     float: left;
-    padding:20px;
+    padding:21px;
     text-align: center;
     text-decoration: none;
 }
 nav li b{
     background: red;
     color: white;
+    font-size: large;
     display: block;
     float: right;
-    padding:20px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     border: 1px solid;
@@ -193,6 +216,11 @@ div.pu img{
     
 }
 
+table.lib{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 td.lib{
     margin: 15px;
     border: 1px solid #ccc;
@@ -207,3 +235,26 @@ td.lib:hover{
     border: 1px solid #777;
     transform: scale(1.05);
 }
+
+.button {
+  background-color: #616366;
+  border: none;
+  color: #616366;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #616366;
+  color: white;
+  border: 2px solid #e7e7e7;
+}
+
+.button1:hover {background-color: #000000;}

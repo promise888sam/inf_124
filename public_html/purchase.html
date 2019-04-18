@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>YUFAN</title>
+        <title>Payment</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -19,19 +19,20 @@
 
     
 <form id="purchaseform" action="mailto:pedalworld@gmail.com?subject=Item%20Purchase" method="post" enctype="text/plain">
-    <div>purchase information:</div>
-    item: <input type="text" name="Item number" required><br>
-    quality: <input type="text" name="quality" pattern="[0-9]{}" required><br>
-    <div>contact form:</div><br>
-    First Name: <input type="text" name="First Name" required><br>
-    Last Name: <input type="text" name="Last Name" required><br>
-    Phone Number: <input type="text" id="pno" name="Phone number" pattern="[0-9]{10}" maxlength="10" required><br>
-    E-Mail: <input type="email" id="email" name="e-mail" required><br>
-    Address: <input type="text" id="address" name="Address" size="100" required><br> 
-    <div>payment:</div>
-    Card Number: <input type="text" id="cno" name="Card number" pattern="[0-9]{16}" maxlength="16" required><br>
+    <div><h1 style="color:white">purchase information:</h1></div>
+    item: <input type="text" name="Item number" required><br><br>
+    quality: <input type="text" name="quality" required><br><br>
+    <div><h2 style="color:white">contact form:</h2></div><br>
+    First Name: <input type="text" name="First Name" required><br><br>
+    Last Name: <input type="text" name="Last Name" required><br><br>
+    Phone Number: <input type="text" id="pno" name="Phone number" pattern="[0-9]{10}" maxlength="10" required><br><br>
+    E-Mail: <input type="email" id="email" name="e-mail" required><br><br>
+    Address: <input type="text" id="address" name="Address" size="50" required><br> <br>
+    <div><h2 style="color:white">payment:</h2></div><br>
+    Card Number: <input type="text" id="cno" name="Card number" pattern="[0-9]{16}" maxlength="16" required><br><br>
     Shipping Method: <input type="text" name="Shipping method" required>
-    <center>
+    <br>
+    <center><br>
         <input type="submit" value="Purchase">
         <input type="reset" name="Reset">
     </center></form>
