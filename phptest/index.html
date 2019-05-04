@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        function showHint(str) {
+            if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "gethint.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+
+        
+
+
+        <form id="purchaseform" action="welcome_get.php" method="get">
+            <div>purchase information:</div>
+
+            item: <select name="Itemnumber" required>
+                <option value="god of war   price=50">god of war</option>
+                <option value="far cry 5    price=52.99">far cry 5</option>
+                <option value="mass effect Aandromeda   price=10.93">mass effect Aandromeda</option>
+                <option value="assassin's creed origin  price=53">assassin's creed origin</option>
+                <option value="titanfall 2  price=19.99">titanfall 2</option>
+                <option value="kirby star allies    price=55.99">kirby star allies</option>
+            </select>
+
+            <br>
+
+            quality: <input type="text" name="quality" required><br>
+            <div>contact form:</div><br>
+            First Name: <input type="text" name="FirstName" required><br>
+            Last Name: <input type="text" name="LastName" required><br>
+            Phone Number: <input type="text" name="Phonenumber" pattern="[0-9]{10}" maxlength="10" required><br>
+            E-Mail: <input type="text" name="e-mail" required><br>
+            Address: <input type="text" name="Address" size="100" required><br>
+
+            state: <input type="text" name="state" onkeyup="showHint(this.value)">Suggestions  : <span id="txtHint"></span><br>
+
+
+            <div>payment:</div>
+            Card Number: <input type="text" name="Cardnumber" pattern="[0-9]{16}" maxlength="16" required><br>
+            Shipping Method: <input type="text" name="Shippingmethod" required>
+            <center>
+                <input type="submit" value="Purchase">
+                <input type="reset" name="Reset">
+            </center>
+        </form>
+    </div>
+    
+</body>
+</html>
