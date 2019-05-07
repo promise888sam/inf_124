@@ -61,7 +61,7 @@
             <?php
             $servername = "localhost";
             $username = "root";
-            $password = "lk824651233";
+            $password = "";
             $dbname = "gamedb";
 
             // Create connection

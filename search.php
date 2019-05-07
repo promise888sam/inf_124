@@ -1,5 +1,5 @@
 <?php  
-$connect = mysqli_connect('localhost', 'root', 'lk824651233');
+$connect = mysqli_connect('localhost', 'root', '');
  
 $db_selected = mysqli_select_db($connect, 'gamedb');
 
