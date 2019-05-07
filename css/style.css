@@ -1,0 +1,266 @@
+body {
+    background:white;
+    font-family: "Helvetica","Arial",Tahoma;
+    font-color: white;
+}
+
+h1{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h3{
+    font-family:Serif;
+    height: 150px;
+    color: #000000;
+    text-align: center;
+    font-size: 500%;
+}
+
+h6{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h2{
+    height: 40px;
+    line-height: 100%;
+    color: black;
+    
+    text-align: center;
+    font-size: 0.5cm;
+    padding: 10px;
+}
+h4{
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    font-size:30px;
+}
+h4.small{
+    height: 140px;
+    line-height: 90%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2cm;
+}
+h5{
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+
+}
+p{
+    color: white;
+    padding: 2%;
+}
+em{
+    text-align: center;
+}
+img{
+    text-align: center;
+
+    height: auto;
+
+}
+
+
+#wrapper{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+
+    background: white;
+    padding: 3%;
+    text-align: center;
+    
+    
+    padding: 2%;
+
+}
+.info{
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    font-size: 24px;
+}
+
+th{
+    border: 1px solid #FFFFFF;
+    text-align: left;
+    font-size:20px;
+}
+
+#row{
+    background-color: white;
+}
+#bd{
+    background-image: url("https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65");
+}
+
+#about{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+h7{
+    height: 500px;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+header{
+    padding: 5px;
+    text-align: center;
+}
+nav{
+
+    background: #616366;
+    list-style: none;
+}
+nav ul{
+    list-style: none;
+
+}
+nav li a{
+    width: 100px;
+    font-size: large;
+    color: white;
+    display: block;
+    float: left;
+    padding:21px;
+    text-align: center;
+    text-decoration: none;
+}
+nav li b{
+    background: red;
+    color: white;
+    font-size: large;
+    display: block;
+    float: right;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid;
+}
+nav a:hover, nav li.active a{
+    background-color: #322F2C;
+    color: #fff;
+}
+.clear{
+    clear :both;
+}
+
+#social img{
+    padding-top: 5px;
+    height: 50px;
+    width: 50px;
+    
+}
+.left-col{
+    background: #373737;
+    width: 100%;
+    float:left;
+    margin-top: 2%;
+
+    border-radius: 10px;
+    border:1px;
+}
+.sidbar{
+    background: white;
+    width: 100%;
+    float:left;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+li.desc{
+    text-align:center;
+}
+
+
+
+
+
+div.gallery {
+    margin: 15px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    height: 290px;
+    transition: all 0.6s;
+}
+
+div.gallery:hover {
+    color: #FF8C00;
+    border: 1px solid #777;
+    transform: scale(1.05);
+    
+}
+
+div.gallery img {
+    width: 90%;
+    height: auto;
+    
+}
+
+
+
+div.pu img{
+   
+    width: 100;
+    height: 100;
+    
+}
+
+table.lib{
+    text-align:left;
+    margin-left: 250px;
+    margin-right: auto;
+}
+td.lib{
+    background-color: white;
+    margin: 100px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 200px;
+    height: 320px;
+    transition: all 0.6s;
+    
+}
+td.lib:hover{
+    color: #FF8C00;
+    border: 1px solid #777;
+    transform: scale(1.05);
+}
+
+.button {
+  background-color: #616366;
+  border: none;
+  color: #616366;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #616366;
+  color: white;
+  border: 2px solid #e7e7e7;
+}
+
+.button1:hover {background-color: #000000;}
