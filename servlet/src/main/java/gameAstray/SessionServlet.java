@@ -1,4 +1,4 @@
-
+package gameAstray;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -6,23 +6,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-/*import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;*/
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Browse
+ * Servlet implementation class SessionServlet
  */
-@WebServlet("/Browse")
-public class Browse extends HttpServlet {
+@WebServlet("/SessionServlet")
+public class SessionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public Browse() {
+    public SessionServlet() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -32,6 +29,18 @@ public class Browse extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		HttpSession session = request.getSession();
+		String[] history = new String[5];
+		if(session.isNew()) {
+			session.setAttribute("history", history);
+		}
+		else {
+			//String[] history = (String[])session.getAttribute("history");
+			request.setAttribute("history", session.getAttribute("history"));
+		}
+		session.setAttribute("history", history);
+		request.getRequestDispatcher("/Browse.jsp").forward(request, response);
 	}
 
 	/**

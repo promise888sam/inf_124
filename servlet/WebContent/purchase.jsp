@@ -29,7 +29,7 @@
     <nav class="col-md-12 col-xs-12" >
         <ul>
             <li><a href='index.html'>News</a></li>
-            <li><a href='Browse.jsp'>Games</a></li>
+            <li><a href='Browse'>Games</a></li>
             <li><a href='more.html'>About us</a></li>
 
 
@@ -41,44 +41,25 @@
                 <div class="clear"></div>
     </nav>
     <div style="background-image: url('https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65')">
-        
+    <div class="dropdown">
+		  	<button onclick="showList()" class="dropbtn">View history</button>
+		  	<div id="myDropdown" class="dropdown-content">
+		  		<%
+					String[] history = (String[])request.getAttribute("history");
+		  			for(int i = 0; i<5; i++){
+		  				if(history[i]!=null)
+		  					out.println("<a target=\"_blank\" href=Purchase?name="+history[i]+">"+history[i]+"</a>");
+		  			}
+				%>
+			</div>
+		</div>    
     <div id="wrapper">
         <table class="lib">
             
-            <%@ page import="java.sql.*" %>
-        	<%@ page import="javax.sql.*" %>
             <%
-            
-            String servername = "localhost";
-            String username = "root";
-            String password = "";
-            String dbname = "gamedb";
-
-            // Create connection
-            Class.forName("com.mysql.jdbc.Driver");
-            java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamedb", username, password);
-            
-            // Connect
-			String query = "SELECT * FROM game WHERE game.name = ?";
-    		PreparedStatement statement = con.prepareStatement(query);
-    		statement.setString(1, request.getParameter("name"));
-    		ResultSet result = statement.executeQuery();
-    		
-    		while(result.next()) {
-                out.println("<tr>");
-                out.println("<th><div><img src=image/"+result.getString("img")+" width=\"200\" height=\"200\"></th>");
-                out.println("<th><div><h4><pre>    "+result.getString("name")+"</pre></h4>");
-                out.println("<br><pre>      Game ID: "+result.getInt("id"));
-                out.println("<br>      Price: $"+result.getString("price"));
-                out.println("<br>      Platform: "+result.getString("platform"));
-                out.println("<br>      Publisher: "+result.getString("publisher"));
-                out.println("<br>      Realease Date: "+result.getString("realeaseDate")+"</pre></th>");
-                
-                out.println("</tr>");
-            }
-
-
-            %>
+				Object result = request.getAttribute("result");
+				out.println(result);
+			%>
             
         </table>
         <a href="cart">
@@ -88,3 +69,23 @@
     </div>
 </body>
 </html>
+<script>
+
+function showList() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
