@@ -77,8 +77,13 @@ public class Browse extends HttpServlet {
         
 		request.setAttribute("result", browse);
 		
+		String[] history;
+		
 		HttpSession session = request.getSession(false);
-		String[] history = (String[])session.getAttribute("history");
+		if(session != null)
+			history = (String[])session.getAttribute("history");
+		else
+			history = new String[5];
 		
 		request.setAttribute("history", history);
 		

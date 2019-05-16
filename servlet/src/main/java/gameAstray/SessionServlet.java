@@ -31,12 +31,13 @@ public class SessionServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		HttpSession session = request.getSession();
-		String[] history = new String[5];
+		String[] history;
 		if(session.isNew()) {
+			history = new String[5];
 			session.setAttribute("history", history);
 		}
 		else {
-			//String[] history = (String[])session.getAttribute("history");
+			history = (String[])session.getAttribute("history");
 			request.setAttribute("history", session.getAttribute("history"));
 		}
 		session.setAttribute("history", history);
