@@ -70,6 +70,7 @@ public class Purchase extends HttpServlet {
 	            + "\n<br>      Platform: "+result.getString("platform")
 	            + "\n<br>      Publisher: "+result.getString("publisher")
 	            + "\n<br>      Realease Date: "+result.getString("realeaseDate")+"</pre></th>"
+	            + "\n<br>      <td>Game discription: "+result.getString("discription")+"</pre></td>"
 	            + "\n</tr>";
 	        }
         } catch (ClassNotFoundException e) {

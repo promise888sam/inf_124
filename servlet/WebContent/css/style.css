@@ -11,20 +11,6 @@ h1{
     font-weight: 600;
     margin-bottom: 30px;
 }
-h3{
-    font-family:Serif;
-    height: 150px;
-    color: #000000;
-    text-align: center;
-    font-size: 500%;
-}
-
-h6{
-    font-family: 'Anton', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: xx-large;
-}
 
 h2{
     height: 40px;
@@ -35,6 +21,15 @@ h2{
     font-size: 0.5cm;
     padding: 10px;
 }
+
+h3{
+    font-family:Serif;
+    height: 150px;
+    color: #000000;
+    text-align: center;
+    font-size: 500%;
+}
+
 h4{
     color: black;
     font-weight: bold;
@@ -49,6 +44,7 @@ h4.small{
     text-align: center;
     font-size: 1.2cm;
 }
+
 h5{
     font-size: 19px;
     line-height: 1.375em;
@@ -57,13 +53,30 @@ h5{
     margin-bottom: 30px;
 
 }
+
+h6{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
+h7{
+    height: 500px;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+
 p{
     color: white;
     padding: 2%;
 }
+
 em{
     text-align: center;
 }
+
 img{
     text-align: center;
 
@@ -94,10 +107,12 @@ img{
 }
 
 th{
-    
+	width: 20%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     font-size:20px;
-    padding:20px;
+    padding:15px;
 }
 
 #row{
@@ -111,52 +126,50 @@ th{
     margin-left: 50px;
     margin-right: 50px;
 }
-h7{
-    height: 500px;
-    color: white;
-    text-align: center;
-    font-size: xx-large;
-}
+
 header{
     padding: 5px;
     text-align: center;
 }
+
 nav{
-
-    background: #616366;
+	background: #616366;
     list-style: none;
 }
-nav ul{
-    list-style: none;
 
+nav li{
+	float: none;
 }
+
 nav li a{
-    width: 100px;
     font-size: large;
     color: white;
     display: block;
     float: left;
-    padding:21px;
+    padding:20px 30px;
     text-align: center;
     text-decoration: none;
 }
+
 nav li b{
-    background: red;
+    background: #e85a31;
     color: white;
     font-size: large;
     display: block;
     float: right;
-    padding: 20px;
+    padding: 19px 30px;
     text-align: center;
     text-decoration: none;
     border: 1px solid;
 }
+
 nav a:hover, nav li.active a{
     background-color: #322F2C;
     color: #fff;
 }
+
 nav li b:hover{
-	background-color: #ee6911;
+	background-color: #ff2020;
 }
 .clear{
     clear :both;
@@ -260,7 +273,7 @@ table.lib{
 
 .button1:hover {background-color: #000000;}
 
-.dropdown {
+/*.dropdown {
 	margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -310,4 +323,4 @@ table.lib{
 
 .dropdown a:hover {background-color: #808080;}
 
-.show {display: block;}
+.show {display: block;}*/
