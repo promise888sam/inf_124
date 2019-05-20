@@ -61,7 +61,7 @@ public class Browse extends HttpServlet {
 	            + ("\n<th><div><h4><pre>    "+result.getString("name")+"</pre></h4>")
 	            + ("\n<br><pre>      Price: $"+result.getString("price"))
 	            + ("\n<br>      Platform: "+result.getString("platform")+"</pre></th>")
-	            + ("\n<th id=\"click\"><pre><a target=\"_blank\" href=\"Purchase?name="+result.getString("name")+"\"><img src=\"image/Details.png\" width=\"200\" height=\"200\"></a></pre></th>")
+	            + ("\n<th id=\"click\"><a target=\"_blank\" href=\"Purchase?name="+result.getString("name")+"\"><img src=\"image/Details.png\" width=\"200\" height=\"200\"></a></pre></th>")
 	
 	            + ("\n</tr>");
 	            

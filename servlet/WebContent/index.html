@@ -12,6 +12,7 @@ and open the template in the editor.
 	<link rel="stylesheet" type="text/css" href="css/carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -21,8 +22,8 @@ and open the template in the editor.
 			    <img src="image/logo.jpg"  style="width:360px;height:100px;text-align:center;position:relative;left:2%"> 
 			</div>
 			<div class="col-8" style="padding-top: 50px;">
-			    <form class="form-inline mr-auto">
-				  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width:50%;">
+			    <form action="/gameAstray/Purchase" class="form-inline mr-auto">
+				  <input class="form-control mr-sm-2" type="text" name="name" placeholder="Search" aria-label="Search" style="width:50%;">
 				  <button class="btn btn-primary" type="submit">Search</button>
 				</form>
 			</div>
@@ -64,8 +65,27 @@ and open the template in the editor.
     </footer>
 </body>
 </html>
-
-
-
-                    
-
+ <script>  
+$(document).ready(function(){  
+    $('#search').keyup(function(){  
+        var query = $(this).val();  
+        if(query !== '')  
+        {  
+            $.ajax({  
+                url:"search.php",  
+                method:"POST",  
+                data:{email_query:query},  
+                success:function(data)  
+                {  
+                    $('#emailList').fadeIn();  
+                    $('#emailList').html(data);  
+                }  
+            });  
+        }  
+    });  
+    $(document).on('click', '#emailList li', function(){  
+         $('#search').val($(this).text());  
+         $('#searchList').fadeOut();  
+    });  
+ });
+ </script>

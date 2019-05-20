@@ -21,8 +21,8 @@
 			    <img src="image/logo.jpg"  style="width:360px;height:100px;text-align:center;position:relative;left:2%"> 
 			</div>
 			<div class="col-8" style="padding-top: 50px;">
-			    <form class="form-inline mr-auto">
-				  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width:50%;">
+			    <form action="/gameAstray/Purchase" class="form-inline mr-auto">
+				  <input class="form-control mr-sm-2" type="text" name="name" placeholder="Search" aria-label="Search" style="width:50%;">
 				  <button class="btn btn-primary" type="submit">Search</button>
 				</form>
 			</div>

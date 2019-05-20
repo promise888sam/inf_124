@@ -59,9 +59,9 @@ public class Purchase extends HttpServlet {
 	        java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamedb", username, password);
 	        
 	        // Connect
-			String query = "SELECT * FROM game WHERE game.name = ?";
+			String query = "SELECT * FROM game WHERE game.name LIKE ?";
 			PreparedStatement statement = con.prepareStatement(query);
-			statement.setString(1, request.getParameter("name"));
+			statement.setString(1, "%"+request.getParameter("name")+"%");
 			ResultSet result = statement.executeQuery();
 			
 			while(result.next()) {
