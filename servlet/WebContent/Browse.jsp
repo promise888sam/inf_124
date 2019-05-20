@@ -9,7 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link type="text/css" rel="stylesheet" href="css/carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
@@ -28,63 +28,76 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</div><br>
 	
-        <nav>
-            <ul>
-                <li><a href='index.html'>News</a></li>
-                <li class='active'><a href='Browse'>Games</a></li>
-                <li><a href='more.html'>About us</a></li>
+    <nav class="navbar navbar-expand-md navbar-dark p-0">
+        <ul class="navbar-nav mr-auto">
+            <li><a href='index.html'>News</a></li>
+            <li class='active'><a href='Browse'>Games</a></li>
+            <li><a href='more.html'>About us</a></li>
 
-                <li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          View history
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <%@ page import="java.net.*" %>
-				  		<%
-							String[] history = (String[])request.getAttribute("history");
-				  			for(int i = 0; i<5; i++){
-				  				if(history[i]!=null)
-								out.println("<a class=\"dropdown-item\" target=\"_blank\" href=Purchase?name="+URLEncoder.encode(history[i], "UTF-8")+">"+history[i]+"  style=\"padding:20px 30px;\"</a>");
-				  			}
-						%>
-			        </div>
-			    </li>
-                <li><b>Cart</b></li>
-                <li><b>Account</b></li>
-                
-            </ul>
-                    <div class="clear"></div>
-        </nav>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" style="padding:16px 30px; color:white;">
+                  View history
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <%@ page import="java.net.*" %>
+                    <%
+                        String[] history = (String[])request.getAttribute("history");
+                        if(history[0] == null)
+                            out.println("<a class=\"dropdown-item\">No history</a>");
+                        for(int i = 0; i<5; i++){
+                            if(history[i]!=null)
+                            out.println("<a class=\"dropdown-item\" target=\"_blank\" href=Purchase?name="+URLEncoder.encode(history[i], "UTF-8")+">"+history[i]+"</a>");
+                        }
+                    %>
+                </div>
+            </li>
+            <li class="nav-item"><b class="nav-link" style="color:white; padding:16px;">Account</b></li>
+            <li class="nav-item"><b class="nav-link" style="color:white; padding:16px;">Cart</b></li>
+        </ul>
+    </nav>
     
-        <div style="background-image: url('https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65')">
-        
+    <div style="background-image: url('https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65')">
+    
 
+    <div id="wrapper"> 
+        <img src="image/rec.png"  style="width:100%;height:15%;text-align:center;position:relative;">
+    </div>
+     
+    <div id="wrapper">
+     <table class="lib">
+		<%
+			Object result = request.getAttribute("result");
+			out.println(result);
+		%>
+     </table>
+
+    </div>
         <div id="wrapper"> 
-            <img src="image/rec.png"  style="width:100%;height:15%;text-align:center;position:relative;">
+            <img src="image/ps4bar.png"  style="width:100%;height:12%;text-align:center;position:relative;">
         </div>
-	        
-        <div id="wrapper">
-	        <table class="lib">
-	        
-				<%
-					Object result = request.getAttribute("result");
-					out.println(result);
-				%>
-	            
-	        </table>
+        <div id="wrapper"> 
+            <img src="image/ps4.png"  style="width:100%;height:50%;text-align:center;position:relative;">
+        </div>
+    <br>
+    
+    </div>
+    <footer class="footer">
+     	<ul class="mr-auto" style="list-style: none;">
+     	<li style="display:inline;"><a href="#">Team Astray: Ken Liu, Yu Fan</a>&nbsp&nbsp|&nbsp&nbsp</li>
+        <li style="display:inline;"><a href="more.html">About Us</a>&nbsp&nbsp|&nbsp&nbsp</li>
+        <li style="display:inline;"><a href="#">Licenses</a></li>
 
-        </div>
-            <div id="wrapper"> 
-                <img src="image/ps4bar.png"  style="width:100%;height:12%;text-align:center;position:relative;">
-            </div>
-            <div id="wrapper"> 
-                <img src="image/ps4.png"  style="width:100%;height:50%;text-align:center;position:relative;">
-            </div>
-        <br>
-        
-        </div>
+    	<li style="float:right;">&copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>. All rights reserved
+        </li>
+        </ul>
+    </footer>
         
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
