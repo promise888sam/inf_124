@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+    </head>
+    <body>
+       
+        <form action="add" method="get">
+        <div><h1>purchase information:</h1></div>
+        Subtotal: <input type="text" name="total" required><br><br>
+        <div><h2>contact form:</h2></div><br>
+        First Name: <input type="text" name="First Name" required><br><br>
+        Last Name: <input type="text" name="Last Name" required><br><br>
+        Phone Number: <input type="text" id="pno" name="Phone" pattern="[0-9]{10}" maxlength="10" required><br><br>
+        E-Mail: <input type="email" id="email" name="e-mail" required><br><br>
+        Address: <input type="text" id="address" name="Address" size="50" required><br> <br>
+        <div><h2>payment:</h2></div><br>
+        Card Number: <input type="text" id="cno" name="Card number" pattern="[0-9]{16}" maxlength="16" required><br><br>
+        
+       
+        
+        <br>
+        <center><br>
+            
+        <input type="submit" value="Purchase">
+        <input type="reset" name="Reset">
+    </center></form>
+            
+    </body>
+</html>
