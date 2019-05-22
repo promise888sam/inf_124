@@ -49,7 +49,7 @@ public class Purchase extends HttpServlet {
 		request.setAttribute("history", history);
 		
         String username = "root";
-        String password = "";
+        String password = "inf124";
         String res = "";
 
         // Create connection
@@ -66,16 +66,19 @@ public class Purchase extends HttpServlet {
 			
 			while(result.next()) {
 	            res += ("<tr>")
-	            + "\n<td><div><img src=image/"+result.getString("img")+" width=\"200\" height=\"200\"></td>"
-	            + "\n<td><div><h4><pre>   "+result.getString("name")+"</pre></h4>"
+	            + "\n<td><img src=image/"+result.getString("img")+" width=\"200\" height=\"200\"></td>"
+	            + "\n<td><h4><pre>   "+result.getString("name")+"</pre></h4>"
 	            + "\n<br><pre>      Game ID: "+result.getInt("id")
 	            + "\n<br>      Price: $"+result.getString("price")
 	            + "\n<br>      Platform: "+result.getString("platform")
 	            + "\n<br>      Publisher: "+result.getString("publisher")
 	            + "\n<br>      Realease Date: "+result.getString("realeaseDate")+"</pre></th>"
-	            + "\n<br><p>      Game discription: "+result.getString("discription")+"</p>"
+	            + "\n<br><p>      "+result.getString("discription")+"</p>"
 	            + "\n</tr>";
 	        }
+			
+			result.close();
+			con.close();
         } catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -85,6 +88,7 @@ public class Purchase extends HttpServlet {
 		}
 		
         request.setAttribute("result", res);
+        request.setAttribute("name", request.getParameter("name"));
         request.getRequestDispatcher("/purchase.jsp").forward(request, response); 
 		
 	}

@@ -46,7 +46,7 @@ h4.small{
 }
 
 h5{
-    font-size: 19px;
+    font-size: 30px;
     line-height: 1.375em;
     color: #303030;
     font-weight: 400;
@@ -80,9 +80,7 @@ em{
 
 img{
     text-align: center;
-
     height: auto;
-
 }
 
 
@@ -90,7 +88,7 @@ img{
     
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 1100px;
     height: auto;
 
     background: white;
@@ -116,16 +114,8 @@ th{
     padding:15px;
 }
 
-#row{
-    background-color: white;
-}
 #bd{
     background-image: url("https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65");
-}
-
-#about{
-    margin-left: 50px;
-    margin-right: 50px;
 }
 
 header{
@@ -151,7 +141,12 @@ nav li a{
     text-decoration: none;
 }
 
-nav li b{
+nav a:hover, nav li.active a{
+    background-color: #322F2C;
+    color: #fff;
+}
+
+#account, #cart{
     background: #e85a31;
     color: white;
     font-size: large;
@@ -161,12 +156,7 @@ nav li b{
     border: 1px solid;
 }
 
-nav a:hover, nav li.active a{
-    background-color: #322F2C;
-    color: #fff;
-}
-
-nav li b:hover{
+#account:hover, #cart:hover{
 	background-color: #ff2020;
 }
 
@@ -275,3 +265,13 @@ table.lib{
 }
 
 .button1:hover {background-color: #000000;}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}

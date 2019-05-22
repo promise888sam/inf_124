@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-md navbar-dark p-0">
         <ul class="navbar-nav mr-auto">
             <li><a href='index.html'>News</a></li>
-            <li class='active'><a href='Browse'>Games</a></li>
+            <li><a href='Browse'>Games</a></li>
             <li><a href='more.html'>About us</a></li>
 
         </ul>
@@ -54,8 +54,8 @@
                     %>
                 </div>
             </li>
-            <li class="nav-item"><b class="nav-link" style="color:white; padding:16px;">Account</b></li>
-            <li class="nav-item"><b class="nav-link" style="color:white; padding:16px;">Cart</b></li>
+            <li class="nav-item"><a id="account" href="#" class="nav-link" style="color:white; padding:16px;">Account</a></li>
+            <li class="nav-item"><a id="cart" href="Cart" class="nav-link" style="color:white; padding:16px;">Cart</a></li>
         </ul>
     </nav>
     <div style="background-image: url('https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65')">
@@ -69,9 +69,11 @@
 			%>
             
         </table>
-        <a href="cart">
-        	<img src="image/add.jpg">
-        </a>
+        <%
+	        out.println("<a href=\"Cart?name="+request.getAttribute("name")+"\">"
+	        	+ "<img src=\"image/add.jpg\">"
+	        +"</a>");
+	    %>
     </div><br><br><br><br><br>
     </div>
     

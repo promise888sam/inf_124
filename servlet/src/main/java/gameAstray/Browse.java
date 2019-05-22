@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,7 +43,7 @@ public class Browse extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		
         String username = "root";
-        String password = "";
+        String password = "inf124";
         String browse = "";
         // Create connection
         try {
@@ -56,34 +57,39 @@ public class Browse extends HttpServlet {
 			ResultSet result = statement.executeQuery();
 			
 			while(result.next()) {
-	            browse += ("<tr>")
-	            + ("\n<th><div><img src=image/"+result.getString("img")+" width=\"200\" height=\"200\"></th>")
-	            + ("\n<th><div><h4><pre>    "+result.getString("name")+"</pre></h4>")
-	            + ("\n<br><pre>      Price: $"+result.getString("price"))
-	            + ("\n<br>      Platform: "+result.getString("platform")+"</pre></th>")
-	            + ("\n<th id=\"click\"><a target=\"_blank\" href=\"Purchase?name="+result.getString("name")+"\"><img src=\"image/Details.png\" width=\"200\" height=\"200\"></a></pre></th>")
+	            browse += "<tr>"
+	            + "\n<th><img src=image/"+result.getString("img")+" width=\"200\" height=\"200\"></th>"
+	            + "\n<th><h4><pre>    "+result.getString("name")+"</pre></h4>"
+	            + "\n<br><pre>      Price: $"+result.getString("price")
+	            + "\n<br>      Platform: "+result.getString("platform")+"</pre></th>"
+	            + "\n<th id=\"click\"><a target=\"_blank\" href=\"Purchase?name="+result.getString("name")+"\"><img src=\"image/Details.png\" width=\"200\" height=\"200\"></a></pre></th>"
 	
-	            + ("\n</tr>");
+	            + "\n</tr>";
 	            
 	        }
+			
+			result.close();
+			con.close();
         } catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-        
+		} 
         
 		request.setAttribute("result", browse);
 		
 		String[] history;
 		
 		HttpSession session = request.getSession(false);
-		if(session != null)
-			history = (String[])session.getAttribute("history");
-		else
+		
+		if(session == null) {
 			history = new String[5];
+		}
+		else {
+			history = (String[]) session.getAttribute("history");
+		}
 		
 		request.setAttribute("history", history);
 		

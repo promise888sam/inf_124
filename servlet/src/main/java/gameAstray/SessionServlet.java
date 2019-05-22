@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 
 /**
  * Servlet implementation class SessionServlet
@@ -32,15 +33,30 @@ public class SessionServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		String[] history;
+		ArrayList<String> cart = null;
+		
 		if(session.isNew()) {
 			history = new String[5];
+			cart = new ArrayList<String>();
 			session.setAttribute("history", history);
+			session.setAttribute("cart", cart);
 		}
 		else {
 			history = (String[])session.getAttribute("history");
+			cart = (ArrayList<String>) session.getAttribute("cart");
 			request.setAttribute("history", session.getAttribute("history"));
+			request.setAttribute("cart", session.getAttribute("cart"));
+		}
+		if(history == null) {
+			history = new String[5];
+			request.setAttribute("history", history);
+		}
+		if(cart == null) {
+			cart = new ArrayList<String>();
+			request.setAttribute("cart", cart);
 		}
 		session.setAttribute("history", history);
+		session.setAttribute("cart", cart);
 		request.getRequestDispatcher("/Browse.jsp").forward(request, response);
 	}
 
