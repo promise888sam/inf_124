@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 20, 2019 at 04:58 AM
+-- Generation Time: May 23, 2019 at 05:36 AM
 -- Server version: 5.7.21-log
 -- PHP Version: 7.3.4
 
@@ -92,6 +92,50 @@ INSERT INTO `autocomplete` (`states`, `emails`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `confirmation`
+--
+
+CREATE TABLE `confirmation` (
+  `id` int(64) NOT NULL,
+  `item` varchar(128) NOT NULL,
+  `quantity` int(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `confirmation`
+--
+
+INSERT INTO `confirmation` (`id`, `item`, `quantity`) VALUES
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'ARK', 1),
+(8, 'Don\'t Starve Together', 1),
+(8, 'ARK', 1),
+(8, 'ARK', 1),
+(8, 'ARK', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1),
+(8, 'ARK', 1),
+(8, 'Call of Duty: Black Ops 4', 1),
+(8, 'Fortnite', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `game`
 --
 
@@ -129,18 +173,42 @@ INSERT INTO `game` (`id`, `name`, `publisher`, `price`, `realeaseDate`, `platfor
 --
 
 CREATE TABLE `purchase` (
-  `ItemName` varchar(128) NOT NULL,
-  `quantity` int(64) NOT NULL,
+  `id` int(128) NOT NULL,
   `FirstName` varchar(128) NOT NULL,
   `LastName` varchar(128) NOT NULL,
   `Phonenumber` varchar(64) NOT NULL,
-  `email` varchar(128) NOT NULL,
-  `Address` varchar(128) NOT NULL,
   `Cardnumber` varchar(64) NOT NULL,
-  `Shippingmethod` varchar(64) NOT NULL,
+  `Address` varchar(128) NOT NULL,
+  `city` varchar(128) NOT NULL,
   `state` varchar(32) NOT NULL,
   `zip` int(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `purchase`
+--
+
+INSERT INTO `purchase` (`id`, `FirstName`, `LastName`, `Phonenumber`, `Cardnumber`, `Address`, `city`, `state`, `zip`) VALUES
+(8, 'Ken', 'Liu', '123412341234', '2341234234', 's', 's', 's', 3245),
+(9, 'Ken', 'Liu', '123412341234', '2341234234', 's', 's', 's', 3245),
+(10, 'Ken', 'Liu', '123412341234', '2341234234', 's', 's', 's', 3245),
+(11, 'Ken', 'Liu', '12313451345', '2341234234', 's', 's', 's', 124),
+(12, 'Ken', 'Liu', '56246246246', '2341234234', 's', 's', 's', 24),
+(13, 'Ken', 'Liu', '123412341234', '2341234234', 's', 's', 's', 2325),
+(14, 'Ken', 'Liu', '123412341234', '2341234234', 's', 's', 's', 2325),
+(15, 'Ken', 'Liu', '123123123123', '2341234234', 's', 's', 's', 123),
+(16, 'Ken', 'Liu', '123123123', '2341234234', 's', 's', 's', 134),
+(17, 'Ken', 'Liu', '123123123', '2341234234', 's', 's', 's', 134),
+(18, 'Ken', 'Liu', '324242432342', '2341234234', 's', 's', 's', 234),
+(19, 'Ken', 'Liu', '13412341341', '2341234234', 's', 's', 's', 13),
+(20, 'Ken', 'Liu', '13412341341', '2341234234', 's', 's', 's', 13),
+(21, 'Ken', 'Liu', '13412341341', '2341234234', 's', 's', 's', 13),
+(22, 'Ken', 'Liu', '13412341341', '2341234234', 's', 's', 's', 13),
+(23, 'Ken', 'Liu', '324134141134', '2341234234', 's', 's', 's', 134),
+(24, 'Ken', 'Liu', '134134134134', '2341234234', 's', 's', 's', 134),
+(25, 'Ken', 'Liu', '245245252', '2341234234', 's', 's', 's', 124),
+(26, 'Ken', 'Liu', '2342342424', '2341234234', 's', 's', 's', 2325),
+(27, 'Ken', 'Liu', '123123124124124', '2341234234', 's', 's', 's', 123);
 
 --
 -- Indexes for dumped tables
@@ -160,6 +228,13 @@ ALTER TABLE `game`
   ADD UNIQUE KEY `ID` (`id`);
 
 --
+-- Indexes for table `purchase`
+--
+ALTER TABLE `purchase`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -168,6 +243,12 @@ ALTER TABLE `game`
 --
 ALTER TABLE `game`
   MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `purchase`
+--
+ALTER TABLE `purchase`
+  MODIFY `id` int(128) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
