@@ -55,7 +55,7 @@
                 </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="#" id="account" style="color:white; padding:16px;">Account</a></li>
-            <li class="nav-item"><a class="nav-link" href="Cart" id="cart" style="color:white; padding:16px;">Cart</a></li>
+            <li class="nav-item"><a class="nav-link active" href="Cart" id="cart" style="color:white; padding:16px;">Cart</a></li>
         </ul>
     </nav>
     <div style="background-image: url('https://borderlands.com/images/home/footer-bg.jpg?eae91b1d47e12e7f0c62f5bfaf5bca65')">

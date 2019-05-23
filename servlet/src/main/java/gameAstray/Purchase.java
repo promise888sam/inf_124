@@ -56,7 +56,7 @@ public class Purchase extends HttpServlet {
         try {
 			Class.forName("com.mysql.jdbc.Driver");
 		
-	        java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gamedb", username, password);
+	        java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://centaurus-15.ics.uci.edu:1048/gamedb", username, password);
 	        
 	        // Connect
 			String query = "SELECT * FROM game WHERE game.name LIKE ?";

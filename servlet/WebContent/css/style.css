@@ -160,6 +160,10 @@ nav a:hover, nav li.active a{
 	background-color: #ff2020;
 }
 
+#cart.active{
+	background-color: #ff2020;
+}
+
 .navbar-nav {
     flex-direction: row;
 }
